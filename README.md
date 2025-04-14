@@ -65,4 +65,57 @@ clickhouse-flatfile-ingestion-tool/
 git clone https://github.com/your-username/clickhouse-flatfile-ingestion-tool.git
 cd clickhouse-flatfile-ingestion-tool/backend
 
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+### 3. Start the backend server
+```bash
+npm run dev
+```
+#### Server runs on: http://localhost:5000
+
+### 4. Open the frontend
+
+#### Just open frontend/index.html in your browser, or serve it with your favorite static server.
+
+
+## 🔁 How to Use
+
+1. Select **source** (`ClickHouse` or `Flat File`)
+2. Provide required config or upload file
+3. Choose columns to ingest
+4. Click **Start Ingestion**
+5. View status and processed record count
+
+
+## 🥔 Testing Datasets
+
+| **Dataset**            | **Purpose**                        |
+|------------------------|------------------------------------|
+| `uk_price_paid.csv`    | Flat File ➜ **ClickHouse**         |
+| `sample_output.csv`    | Simulated CH ➜ Flat File           |
+
+**Sources**: [ClickHouse Example Datasets](https://clickhouse.com/docs/en/getting-started/example-datasets)
+
+## 🤖 AI Tools Usage
+
+I used **ChatGPT** for:
+
+- Designing project structure  
+- Writing clean and modular backend code  
+- Generating frontend HTML, CSS, and JS  
+- Creating helper utilities and error handling logic  
+
+and Copilot for fixing issues and debugging 
+
+Prompts used are documented in `prompts.txt`.
+
+## 📝 Notes
+
+- Ensure **ClickHouse** is running locally or via Docker  
+- JWT tokens are passed as passwords in `@apla/clickhouse` config  
+- Flat File ingestion assumes all data as strings (can be extended with type inference)
 
