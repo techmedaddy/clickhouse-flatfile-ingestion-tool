@@ -1,0 +1,44 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment/config files (if any)
+.env
+.env.local
+
+# Uploaded and generated files
+backend/data/uploads/
+testdata/*.csv
+
+# Editor-specific
+.vscode/
+.idea/
+
+# Build output (if using frontend frameworks later)
+dist/
+build/
+
+# Optional: Ignore compiled TypeScript if added
+*.tsbuildinfo
+
+# Coverage and test output
+coverage/
+*.lcov
+
+# Git metadata backups
+*.orig
+
+# Optional: Temporary files
+tmp/
+temp/
+*.tmp
