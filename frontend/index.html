@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickHouse ↔ Flat File Ingestion Tool</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>📥 Data Ingestion Tool</h1>
+
+        <div class="section">
+            <label for="source">Select Data Source:</label>
+            <select id="source">
+                <option value="">-- Choose Source --</option>
+                <option value="clickhouse">ClickHouse</option>
+                <option value="flatfile">Flat File (CSV)</option>
+            </select>
+        </div>
+
+        <!-- ClickHouse Config -->
+        <div class="section hidden" id="clickhouse-config">
+            <h3>ClickHouse Config</h3>
+            <input type="text" id="host" placeholder="Host (e.g., https://localhost)" />
+            <input type="text" id="port" placeholder="Port (e.g., 8443)" />
+            <input type="text" id="database" placeholder="Database (e.g., default)" />
+            <input type="text" id="user" placeholder="Username" />
+            <input type="text" id="token" placeholder="JWT Token" />
+            <button id="connectCH">🔌 Connect</button>
+        </div>
+
+        <!-- Flat File Upload -->
+        <div class="section hidden" id="flatfile-config">
+            <h3>Upload CSV File</h3>
+            <label for="csvFile">Choose a CSV file:</label>
+            <input type="file" id="csvFile" accept=".csv" title="Upload a CSV file for processing" />
+            <input type="text" id="delimiter" placeholder="Delimiter (default ,)" />
+            <button id="uploadCSV">📤 Upload & Load Schema</button>
+        </div>
+
+        <!-- Column Selection -->
+        <div class="section hidden" id="column-section">
+            <h3>Select Columns:</h3>
+            <form id="columnForm"></form>
+        </div>
+
+        <!-- Ingestion Action -->
+        <div class="section hidden-section" id="ingestion-section">
+            <input type="text" id="targetTable" placeholder="Target Table Name (for Flat File → ClickHouse)" />
+            <button id="startIngestion">🚀 Start Ingestion</button>
+        </div>
+
+        <!-- Status Area -->
+        <div class="section" id="status"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
