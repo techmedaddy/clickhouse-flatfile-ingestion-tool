@@ -1,0 +1,11 @@
+# prompts i used with chatgpt to build this project
+
+1. give me a clean folder structure to build this assignment using nodejs backend and simple html css js frontend  
+2. write powershell commands to create this structure step by step like a pro  
+3. in which order should i create files and start the setup to avoid confusion  
+4. help me setup basic express server with route folders and dummy endpoints  
+5. which npm packages i should use for clickhouse, csv and jwt support  
+6. how to fetch tables and columns from clickhouse and export selected ones to csv  
+7. how to upload csv from frontend and insert selected columns into clickhouse  
+8. help me build simple frontend ui to select source, upload or config, and start ingestion  
+9. List edge cases and failure scenarios to validate ingestion
